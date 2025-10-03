@@ -24,6 +24,7 @@
 #include <stdint.h> // for SIZE_MAX
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define DECLARE_ARRAY_STRUCT(prefix, name) \
     typedef struct prefix##_array name##Array;
