@@ -1,0 +1,36 @@
+{
+    "name": "array-macros Build Environment",
+
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": "..",
+        "target": "base"
+    },
+
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/array-macros,type=bind,Z",
+    "workspaceFolder": "/workspaces/array-macros",
+
+    "runArgs": [
+        "-v", "${localEnv:HOME}/.gitconfig:/home/vscode/.gitconfig:ro",
+        "-v", "${localEnv:SSH_AUTH_SOCK}:${localEnv:SSH_AUTH_SOCK}"
+    ],
+
+    "containerEnv": {
+        "BUILD_CONTEXT": "container",
+        "SSH_AUTH_SOCK": "${localEnv:SSH_AUTH_SOCK}"
+    },
+
+    "remoteUser": "vscode",
+    "updateRemoteUserUID": true,
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "github.vscode-github-actions"
+            ]
+        }
+    },
+
+    "postCreateCommand": "sudo git config --system --add safe.directory /workspaces/array-macros"
+}

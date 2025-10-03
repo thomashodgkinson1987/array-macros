@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clean All Builds",
+            "type": "shell",
+            "command": "rm -rf build && rm -rf Testing"
+        }
+    ]
+}

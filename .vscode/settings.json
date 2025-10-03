@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.h": "c"
+    },
+    "cmake.buildDirectory": "${workspaceFolder}/build/${env:BUILD_CONTEXT}"
+}

@@ -1,0 +1,9 @@
+#ifndef ARRAY_MACROS_INT_ARRAY_H
+#define ARRAY_MACROS_INT_ARRAY_H
+
+#include "array_macros.h"
+
+DECLARE_ARRAY_STRUCT(int, Int)
+DECLARE_ARRAY_FUNCTIONS(int, Int, int)
+
+#endif // ARRAY_MACROS_INT_ARRAY_H
