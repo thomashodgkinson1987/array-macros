@@ -6,10 +6,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 add_library(array-macros INTERFACE)
 
-target_include_directories(array-macros INTERFACE
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:include>
-)
+target_include_directories(array-macros INTERFACE include)
 
 option(BUILD_TESTS "Build the array-macros tests" OFF)
 
